@@ -18,7 +18,7 @@ The application will mostly be used on desktop environments but it should be usa
 
 * When the user loads the application it first checks for locally saved shipments and loads them. In case there are none it displays a message asking to load a set over the network.
 
-* Clicking the “Load” button loads all the shipments over the network from _shipments.json_ overwriting any existing ones.
+* Clicking the “Load” button loads all the shipments over the network from /api/shipments. Sample data are in shipments.json
 
 * Clicking the “Save” button saves the existing state of shipments locally for later usage.
 
@@ -59,4 +59,4 @@ Another shipment `6.2,5.9,4,6.9,4.4,1.7,9.5` would require 4 cargo bays.
 
 ## Other
 
-Author here, I appreciate any free time you spend on this. I put the assignment together around 3 areas: layout (HTML, CSS), library/framework knowledge (React, Vue.js, Angular) and your thinking in code. My advice is to first start with these areas and continue from there.
+Author here, I appreciate any free time you spend on this. I put the assignment together around 3 areas: layout (HTML, CSS), library/framework knowledge (Laravel, ReactJs) and your thinking in code. My advice is to first start with these areas and continue from there.
