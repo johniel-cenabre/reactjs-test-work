@@ -1,0 +1,20 @@
+{
+  "name": "reactjs-test-work",
+  "version": "1.0.0",
+  "description": "SpaceX is experiencing an increasing demand of shipments to Mars and has commissioned an application to automate the needed cargo space calculations.",
+  "main": "index.js",
+  "scripts": {
+    "start": "cd cargo-planner && npm start",
+    "serve": "node index",
+    "setup": "cd cargo-planner && npm install",
+    "test": "cd cargo-planner && npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://bitbucket.org/jayblendit/reactjs-test-work.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/jayblendit/reactjs-test-work#readme",
+  "dependencies": {}
+}

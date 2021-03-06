@@ -1,0 +1,25 @@
+.nav {
+  padding: 20px 30px;
+  max-height: calc(100vh - 90px);
+  grid-column: 1 / 2;
+  grid-row: 2 / end;
+  display: grid;
+  gap: 0.5rem;
+  position: sticky;
+  border-right: 1px gray solid;
+  overflow-y: scroll;
+}
+
+@media (max-width: 800px) {
+  .nav {
+    max-height: calc(100vh - 140px);
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav {
+    max-height: calc(100vh - 140px);
+  }
+}
