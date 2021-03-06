@@ -1,13 +1,13 @@
 ### Exam Instructions
 
-## ```npm run setup```
+## Install dependencies
 
-Install dependencies
+```npm run setup```
 
-## ```npm run serve```
+## Run simple http server
 
-Run simple http server
+```npm run serve```
 
-## ```npm start```
+## Run front end app
 
-Run front end app
+```npm start```
