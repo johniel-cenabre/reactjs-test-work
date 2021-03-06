@@ -67,8 +67,4 @@
     grid-row: 1 / 2;
     justify-content: center;
   }
-
-  .header__button {
-    width: 50px;
-  }
 }
