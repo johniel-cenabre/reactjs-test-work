@@ -24,7 +24,9 @@ export const ShipmentsContextProvider = ({ children }) => {
   }, [shipments])
 
   useEffect(() => {
-    if (filteredShipments.includes(selectedShipment)) return
+    if (filteredShipments.includes(selectedShipment)) {
+      return
+    }
     setSelectedShipment(filteredShipments[0] || {})
   }, [filteredShipments])
 
@@ -36,18 +38,9 @@ export const ShipmentsContextProvider = ({ children }) => {
   }
 
   function selectShipment(id) {
-    // Optimized Search
-    const length = shipments.length
-    for (let i = 0, j = length - 1; i < length; i++, j--) {
-      if (shipments[i].id === id) {
-        setSelectedShipment(shipments[i])
-        break
-      }
-      if (shipments[j].id === id) {
-        setSelectedShipment(shipments[j])
-        break
-      }
-    }
+    findShipment(id, (index) => {
+      setSelectedShipment(shipments[index])
+    })
   }
 
   function filterShipments(text) {
@@ -64,23 +57,29 @@ export const ShipmentsContextProvider = ({ children }) => {
 
   function saveShipments() {
     if (!shipments.length) return
-    
-    // Optimized Search
-    const length = shipments.length
-    for (let i = 0, j = length - 1; i < length; i++, j--) {
-      if (shipments[i].id === selectedShipment.id) {
-        shipments[i] = selectedShipment
-        break
-      }
-      if (shipments[j].id === selectedShipment.id) {
-        shipments[j] = selectedShipment
-        break
-      }
-    }
+
+    findShipment(selectedShipment.id, (index) => {
+      shipments[index] = selectedShipment
+    })
     
     localStorage.setItem('shipments', JSON.stringify(shipments))
     alert('Successfully saved shipments')
     setShipments(shipments)
+  }
+
+  function findShipment(id, callback) {
+    // Optimized search
+    const length = shipments.length
+    for (let i = 0, j = length - 1; i < length; i++, j--) {
+      if (shipments[i].id === id) {
+        callback(i)
+        break
+      }
+      if (shipments[j].id === id) {
+        callback(j)
+        break
+      }
+    }
   }
 
   return (
