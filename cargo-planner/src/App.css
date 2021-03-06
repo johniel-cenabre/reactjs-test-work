@@ -11,7 +11,7 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 400px) {
   .app {
     grid-template-columns: 130px 1fr;
   }
