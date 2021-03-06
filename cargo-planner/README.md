@@ -1,4 +1,4 @@
-### Exam Instructions
+### Setup Instructions
 
 ## Install dependencies
 
